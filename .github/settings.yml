@@ -7,8 +7,8 @@
     "state": "open"
 "repository":
   "name": "mezzio-debugger"
-  "description": "[WIP] PHP Debug Bar module for Mezzio"
-  "topics": "ghostwriter, mezzio-debugger, wip"
+  "description": "[WIP] PHP Debug Bar and REPL module for Mezzio Framework"
+  "topics": "debugger, ghostwriter, mezzio, mezzio-debugger, repl, wip"
   "homepage": "https://github.com/ghostwriter/mezzio-debugger"
   "default_branch": "0.1.x"
   "allow_auto_merge": true
