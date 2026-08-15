@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Ghostwriter\Wip\Exception;
+namespace Ghostwriter\MezzioDebugger\Exception;
 
-use Ghostwriter\Wip\Interface\ExceptionInterface;
+use Ghostwriter\MezzioDebugger\Interface\ExceptionInterface;
 use LogicException;
 
 final class ShouldNotHappenException extends LogicException implements ExceptionInterface {}

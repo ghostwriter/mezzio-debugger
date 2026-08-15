@@ -1,11 +1,11 @@
 {
-    "name": "ghostwriter/wip",
-    "description": "Here be dragons",
+    "name": "ghostwriter/mezzio-debugger",
+    "description": "PHP Debug Bar and REPL module for Mezzio Framework",
     "license": "BSD-3-Clause",
     "type": "library",
     "keywords": [
         "ghostwriter",
-        "wip"
+        "mezzio-debugger"
     ],
     "authors": [
         {
@@ -15,12 +15,12 @@
             "role": "Developer"
         }
     ],
-    "homepage": "https://github.com/ghostwriter/wip",
+    "homepage": "https://github.com/ghostwriter/mezzio-debugger",
     "support": {
-        "issues": "https://github.com/ghostwriter/wip/issues",
-        "source": "https://github.com/ghostwriter/wip",
-        "rss": "https://github.com/ghostwriter/wip/releases.atom",
-        "security": "https://github.com/ghostwriter/wip/security/advisories/new"
+        "issues": "https://github.com/ghostwriter/mezzio-debugger/issues",
+        "source": "https://github.com/ghostwriter/mezzio-debugger",
+        "rss": "https://github.com/ghostwriter/mezzio-debugger/releases.atom",
+        "security": "https://github.com/ghostwriter/mezzio-debugger/security/advisories/new"
     },
     "funding": [
         {
@@ -46,6 +46,7 @@
         "ghostwriter/clock": "^3.0.2",
         "ghostwriter/collection": "^2.1.1",
         "ghostwriter/config": "^2.1.3",
+        "ghostwriter/console": "^0.2.3",
         "ghostwriter/container": "^7.0.2",
         "ghostwriter/event-dispatcher": "^6.1.3",
         "ghostwriter/filesystem": "^0.2.1",
@@ -53,7 +54,9 @@
         "ghostwriter/option": "^2.0.0",
         "ghostwriter/result": "^2.0.0",
         "ghostwriter/shell": "^0.1.6",
-        "ghostwriter/uuid": "^1.0.3"
+        "ghostwriter/uuid": "^1.0.3",
+        "php-debugbar/php-debugbar": "^3.8.0",
+        "psy/psysh": "^0.12.24"
     },
     "require-dev": {
         "ext-xdebug": "*",
@@ -65,12 +68,8 @@
     "prefer-stable": true,
     "autoload": {
         "psr-4": {
-            "Ghostwriter\\Wip\\": "src"
-        },
-        "files": [
-            "src/constants.php",
-            "src/functions.php"
-        ]
+            "Ghostwriter\\MezzioDebugger\\": "src"
+        }
     },
     "autoload-dev": {
         "psr-4": {
@@ -124,9 +123,16 @@
         "use-parent-dir": false
     },
     "extra": {
+        "ghostwriter": {
+            "container": {
+                "provider": [
+                    "Ghostwriter\\MezzioDebugger\\Container\\MezzioDebuggerProvider"
+                ]
+            }
+        },
         "thanks": {
-            "name": "ghostwriter/wip",
-            "url": "https://github.com/ghostwriter/wip"
+            "name": "ghostwriter/mezzio-debugger",
+            "url": "https://github.com/ghostwriter/mezzio-debugger"
         }
     },
     "scripts": {
